@@ -13,5 +13,12 @@ namespace Module1Exercise1
         {
 
         }
+
+        protected void btnPlay_Click(object sender, EventArgs e)
+        {
+            string songTitle = song_title.Text;
+
+            nowPlaying.InnerText = "Now Playing " + songTitle;
+        }
     }
 }

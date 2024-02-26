@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Module2Topic1.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Master Page</title>
+    <asp:ContentPlaceHolder ID="head"  runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="navbar">
+                <a href="Exercise1.aspx">Exercise 1</a>
+                <a href="Exercise2.aspx">Exercise 2</a>
+                <a href="Exercise3.aspx">Exercise 3</a>
+                <a href="Exercise4.aspx">Exercise 4</a>
+                <a href="Exercise5.aspx">Exercise 5</a>
+            </div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <div id="footer">
+                Copyright <%= DateTime.Now.Year %> Severino Mariscal
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

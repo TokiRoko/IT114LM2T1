@@ -12,6 +12,27 @@ namespace Module1Exercise1
         protected void Page_Load(object sender, EventArgs e)
         {
             // TODO 3.3 Set the text value of the finalGrade label to "Submit your grade percentage to see your final grade!". Watch out for post backs
+            if (!IsPostBack)
+            {
+                finalGrade.Text = "Submit your grade percentage to see your final grade!";
+            }
+        }
+
+        protected void CalculateGrade(object sender, EventArgs e)
+        {
+            
+
+            if (percentageGrade.Text == "1.00")
+            {
+                congratsMessage.Text = "Congratulations! You achieved a perfect grade!";
+                finalGrade.Text = "";
+
+            }
+            else
+            {
+                congratsMessage.Text = "Good Job!";
+                finalGrade.Text = "";
+            }
         }
     }
 }
